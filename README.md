@@ -170,7 +170,7 @@ This repository contains code and data for exoplanet candidate classification us
 | Ensemble    | KOI     | 0.9415   | -       | -         |       |
 | Ensemble    | K2      | 0.9725   | -       | -         |       |
 | Ensemble    | TOI     | 0.7093   | -       | -         |       |
-| **RWKV_v7** | KOI     | 0.9894   | 0.9947  | 0.7183    | Raw Timeseries |
+| **🏆RWKV_v7** | KOI     | 0.9894   | 0.9947  | 0.7183    | Raw Timeseries |
 | [Timer Transformer](https://github.com/thuml/Large-Time-Series-Model) | KOI | 0.0071 | 0.5000 | 0.5996 | Raw Timeseries |
 
 ## Classification Reports
