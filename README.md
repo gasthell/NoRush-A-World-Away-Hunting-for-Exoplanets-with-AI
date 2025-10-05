@@ -4,11 +4,15 @@ This repository contains code and data for exoplanet candidate classification us
 
 ## Datasets
 
-| Dataset | Description                  | File Location                |
-|---------|------------------------------|------------------------------|
-| KOI     | Kepler Object of Interest    | `dataset/exoTrain.csv`       |
-| K2      | Second Kepler Mission        | `dataset/k2pandc_*.csv`      |
-| TOI     | TESS Object of Interest      | `dataset/TOI_*.csv`          |
+| Dataset  | Description                        | File Location                                 | Link                                                                 |
+|----------|------------------------------------|-----------------------------------------------|---------------------------------------------------------------------|
+| KOI      | Kepler Object of Interest          | `dataset/KOI_*.csv`                           | [KOI Table](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative) |
+| K2       | Second Kepler Mission              | `dataset/k2pandc_*.csv`                       | [K2 Table](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2pandc) |
+| TOI      | TESS Object of Interest            | `dataset/TOI_*.csv`                           | [TOI Table](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TOI) |
+| Kepler   | Kepler labelled time series data   | `dataset/ExoTest.csv`, `dataset/ExoTrain.csv` | [Kepler Kaggle](https://www.kaggle.com/datasets/keplersmachines/kepler-labelled-time-series-data/) |
+
+> **⚠️ Important:**
+> Please download the Kepler Kaggle dataset from [here](https://www.kaggle.com/datasets/keplersmachines/kepler-labelled-time-series-data/) and place the files (`ExoTest.csv`, `ExoTrain.csv`) into the `dataset` folder before running the code.
 
 ## Features Used
 
