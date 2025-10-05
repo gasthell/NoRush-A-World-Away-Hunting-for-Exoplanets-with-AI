@@ -1,3 +1,9 @@
+# Gradio
+gradio_cached_examples/
+gradio_static/
+gradio_tmp/
+.gradio/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -508,9 +508,76 @@ with gr.Blocks(theme=gr.themes.Soft(), title="AI Exoplanet Hunter") as demo:
     
     with gr.Tabs() as tabs:
         with gr.TabItem("Welcome & Instructions", id=0):
-            gr.Markdown("""
-            ## Welcome to the AI-Powered Exoplanet Hunter!
-            """)
+            gr.Markdown(
+                """
+                # Welcome to the AI-Powered Exoplanet Hunter: Professional Edition
+                
+                This is the complete, local version of the application, giving you full access to explore, train, and evaluate powerful machine learning models for exoplanet candidate classification.
+
+                ## How to Use This Tool: A Practical Guide
+                This application is built around two primary workflows: **using pre-trained models** and **creating your own**.
+
+                ---
+
+                ### 🚀 Workflow 1: Using Pre-Trained Models
+                *Use this workflow if you have data you want to classify now.*
+
+                #### **Step 1: Explore the Models**
+                1.  Navigate to the **Model Details** tab.
+                2.  Use the dropdown to select a pre-trained dataset like `KOI`, `K2`, or `TOI`.
+                3.  Click **"Show/Refresh Details"** to analyze its performance. You'll see its accuracy, a confusion matrix, ROC curves, and the most important features it learned.
+
+                #### **Step 2: Make Predictions**
+                *   **For Tabular Data (Stellar Parameters):**
+                    1.  Go to the **Batch Prediction** tab.
+                    2.  Choose the pre-trained model you want to use.
+                    3.  Upload your CSV file containing the corresponding stellar features.
+                    4.  Click **"Run Batch Prediction"** to get the results.
+
+                *   **For Time Series Data (Raw Light Curves):**
+                    1.  Go to the **Raw Time Series Classifier** tab.
+                    2.  From the dropdown, select a folder of a model you have already trained (e.g., inside the `output_weight` directory).
+                    3.  Upload a CSV of raw flux values (see the format instructions in that tab).
+                    4.  Click **"Run Prediction"**.
+
+                ---
+
+                ### 🛠️ Workflow 2: Creating and Tuning Your Own Models
+                *Use this workflow to build a custom classifier from your own dataset.*
+
+                #### **Step 1: Train a New Model**
+                *   **For Tabular Data (Creating an Ensemble):**
+                    1.  Go to the **Train Your Own Ensemble** tab.
+                    2.  Give your new model a unique name.
+                    3.  Upload your CSV dataset.
+                    4.  **Crucially, enter the exact name of your dataset's target column** (e.g., `disposition`).
+                    5.  Click **"Train Custom Ensemble"**. The new model will become available throughout the app upon completion.
+
+                *   **For Time Series Data (Training a Deep Learning Model):**
+                    1.  Go to the **Train Raw Time Series Model** tab.
+                    2.  Upload your training CSV, which **must** follow the specified `LABEL, FLUX.1, ...` format.
+                    3.  Adjust the hyperparameters (epochs, batch size, learning rate).
+                    4.  Click **"Start Training"**. The training logs will appear below, and the final models will be saved in a new folder inside `output_weight`.
+
+                #### **Step 2: Optimize Your Ensemble (Optional)**
+                1.  After training a new ensemble model, go to the **Optimize Ensemble** tab.
+                2.  Select your newly trained model from the dropdown.
+                3.  Choose the number of optimization trials to run.
+                4.  Click **"Start Optimization"** to use Bayesian methods (Optuna) to fine-tune your model for potentially better performance. The model details will update automatically.
+                
+                #### **Step 3: Manage Your Models**
+                -   Go to the **Model Management** tab to download any of your trained **ensemble models** as a `.pkl` file for backup or offline use.
+
+                ---
+
+                ### ⚠️ Best Practices & Important Notes
+                -   **Data Formatting is Key:** The most common source of errors is incorrectly formatted CSV files. Please read the instructions in each tab carefully before uploading data.
+                -   **Computational Cost:** Training new models, especially the time series classifier, is computationally intensive and can take a significant amount of time.
+                -   **Required Files:** The time series features require the `models` directory and a `config.json` file to be present in the application's root folder.
+                -   **Project Repository:** For a deeper dive into the methodology, code, and advanced usage, please visit the official GitHub repository:
+                    **https://github.com/gasthell/NoRush-A-World-Away-Hunting-for-Exoplanets-with-AI**
+                """
+            )
 
         with gr.TabItem("Model Details", id=1):
             refresh_button = gr.Button("Show/Refresh Details for Selected Dataset")
