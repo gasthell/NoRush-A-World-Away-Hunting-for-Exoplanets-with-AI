@@ -185,12 +185,21 @@ This repository contains code and data for exoplanet candidate classification us
 
 ## Usage
 
-1. Clone the repository.
-2. Install dependencies.
-3. Run `gradio_interface.py` for interactive model inference.
-4. See notebooks for data exploration and model training.
+1. Clone this repository to your local machine:
+	```
+	git clone https://github.com/gasthell/NoRush-A-World-Away-Hunting-for-Exoplanets-with-AI.git
+	```
+2. Install required dependencies:
+	```
+	pip install -r requirements.txt
+	```
+3. Download the Kepler Kaggle dataset and place `ExoTest.csv` and `ExoTrain.csv` in the `dataset` folder (see instructions above).
+4. Launch the interactive interface:
+	```
+	python gradio_interface.py
+	```
+5. Explore the provided Jupyter notebooks for data analysis and model training workflows.
 
 ## Team & Hackathon Info
 
 - Project developed for NASA Exoplanet Hackathon 2025
-- Team: [Add your team members here]
