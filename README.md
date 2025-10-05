@@ -201,9 +201,12 @@ This repository contains code and data for exoplanet candidate classification us
 5. Explore the provided Jupyter notebooks for data analysis and model training workflows.
 
 > Or you can use Live Demo!
+> 
 > Curious to see the model in action? Explore the live demo to use the prediction and analysis features.
+> 
 > Please note: This is a demonstration version. Advanced functionalities like model training and hyperparameter optimization are available in the full version, which can be run locally from the repository.
-> 👉 Launch the Live Demo: norush.ai-archive-project.com
+> 
+> 👉 Launch the Live Demo: [norush.ai-archive-project.com](https://norush.ai-archive-project.com/) |
 
 ## Team & Hackathon Info
 
